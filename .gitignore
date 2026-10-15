@@ -1,0 +1,15 @@
+# 전부 무시하고, 동기화할 것만 화이트리스트로 되살린다.
+# Claude Code가 새 캐시/상태 디렉터리를 만들어도 자동으로 걸러진다.
+/*
+
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/CLAUDE.md
+!/settings.json
+!/statusline.js
+
+!/skills/
+/skills/*
+!/skills/git-commit/
+!/skills/squash-commit-range/

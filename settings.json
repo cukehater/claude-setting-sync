@@ -1,0 +1,68 @@
+{
+  "attribution": {
+    "sessionUrl": false
+  },
+  "includeCoAuthoredBy": false,
+  "model": "opus[1m]",
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "caveman@caveman": true,
+    "figma@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "understand-anything@understand-anything": true,
+    "skill-creator@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "eli5@claude-community": true,
+    "humanize-korean@im-not-ai": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    },
+    "understand-anything": {
+      "source": {
+        "source": "github",
+        "repo": "Egonex-AI/Understand-Anything"
+      }
+    },
+    "claude-community": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-community"
+      }
+    },
+    "im-not-ai": {
+      "source": {
+        "source": "github",
+        "repo": "epoko77-ai/im-not-ai"
+      }
+    }
+  },
+  "language": "Korean",
+  "autoUpdatesChannel": "latest",
+  "theme": "auto",
+  "autoCompactEnabled": true,
+  "agentPushNotifEnabled": true,
+  "env": {
+    "EDITOR": "code --wait"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node \"$HOME/.claude/statusline.js\""
+  }
+}
