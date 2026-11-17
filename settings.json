@@ -1,9 +1,36 @@
 {
+  "env": {
+    "EDITOR": "code --wait"
+  },
   "attribution": {
     "sessionUrl": false
   },
   "includeCoAuthoredBy": false,
-  "model": "opus[1m]",
+  "permissions": {
+    "deny": [
+      "Bash(git push)",
+      "Bash(git push:*)"
+    ]
+  },
+  "model": "opus",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Gravity\\.claude\\hooks\\herdr-agent-state.ps1\" session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node \"$HOME/.claude/statusline.js\""
+  },
   "enabledPlugins": {
     "ponytail@ponytail": true,
     "caveman@caveman": true,
@@ -13,7 +40,10 @@
     "skill-creator@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
     "eli5@claude-community": true,
-    "humanize-korean@im-not-ai": true
+    "humanize-korean@im-not-ai": true,
+    "postman@claude-plugins-official": true,
+    "impeccable@claude-community": true,
+    "vercel@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
@@ -57,12 +87,5 @@
   "autoUpdatesChannel": "latest",
   "theme": "auto",
   "autoCompactEnabled": true,
-  "agentPushNotifEnabled": true,
-  "env": {
-    "EDITOR": "code --wait"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "node \"$HOME/.claude/statusline.js\""
-  }
+  "agentPushNotifEnabled": true
 }
