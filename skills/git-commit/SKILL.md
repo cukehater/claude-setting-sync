@@ -1,6 +1,6 @@
 ---
 name: git-commit
-description: Stage all changes and write a commit message in the current repo's actual convention (type(scope): subject, single line, no body — verified against `git log` each time). Use whenever the user asks to commit, "커밋해줘", "커밋 메시지 작성해줘", "변경사항 커밋", or wants staged/unstaged changes turned into a commit — don't invent a generic Conventional Commits message, derive it from this repo's history per the rules below.
+description: Stage all changes and write a Korean commit message in the current repo's actual convention (type(scope): 설명, single line, no body — convention verified against `git log` each time, but the description is always Korean). Use whenever the user asks to commit, "커밋해줘", "커밋 메시지 작성해줘", "변경사항 커밋", or wants staged/unstaged changes turned into a commit — don't invent a generic Conventional Commits message, derive it from this repo's history per the rules below.
 ---
 
 # git-commit
@@ -20,16 +20,16 @@ description: Stage all changes and write a commit message in the current repo's 
 
 - **type**: `feat` `fix` `chore` `refactor` 중 하나. 새 기능=feat, 버그 수정=fix, 포맷팅/설정/제거 등 코드 동작과 무관=chore, 동작 유지한 채 구조 변경=refactor. 레포가 다른 type(docs, test, style 등)을 쓰고 있으면 그걸 따른다.
 - **scope**: 히스토리에 실제로 나타나는 분류를 쓴다 — 그 레포가 디렉터리명을 쓰는지, 패키지명을 쓰는지, 모듈·기능명을 쓰는지 로그를 보고 판단한다. 변경이 그 한 곳에만 국한될 때만 스코프를 단다. 여러 곳에 걸치거나 레포 전역 변경(gitignore, 포매터 설정 등)이면 스코프 생략. 히스토리에 스코프가 아예 없는 레포면 쓰지 않는다.
-- **설명**: 히스토리의 지배 언어를 따른다(한국어 레포는 한국어, 영어 레포는 영어). 한국어면 명사형 종결("~추가", "~처리", "~수정"), 마침표 없이 한 줄.
+- **설명**: **항상 한국어로 쓴다.** 레포 히스토리가 영어여도 마찬가지다 — 이 항목만은 히스토리보다 우선한다. 명사형 종결("~추가", "~처리", "~수정"), 마침표 없이 한 줄. type·scope 키워드와 코드 식별자, 라이브러리명은 원문 그대로 둔다.
 - **body/footer**: 히스토리에 본문이 없으면 추가하지 마라. 한 줄로 끝낸다.
-- **히스토리가 없는 새 레포**: 커밋이 없거나 너무 적어 관례를 읽을 수 없으면 `type: 설명` 형태의 영어 Conventional Commits를 기본값으로 쓰고, 어떤 관례로 갈지 사용자에게 한 번 확인한다.
+- **히스토리가 없는 새 레포**: 커밋이 없거나 너무 적어 관례를 읽을 수 없으면 `type: 설명` 형태에 한국어 설명을 기본값으로 쓴다.
 
-형태별 예시 — 특정 레포의 로그가 아니라 패턴 샘플이다. 어느 쪽을 쓸지는 항상 그 레포 히스토리가 정한다:
+형태별 예시 — 특정 레포의 로그가 아니라 패턴 샘플이다. 스코프를 쓸지 말지는 그 레포 히스토리가 정하고, 설명 언어는 레포와 무관하게 늘 한국어다:
 ```
-스코프 있는 한국어 레포:   feat(auth): 소셜 로그인 연동 추가
-스코프 없는 한국어 레포:   fix: 목록 페이지 무한 스크롤 중복 호출 수정
-스코프 있는 영어 레포:     refactor(api): extract pagination helper
-스코프 없는 영어 레포:     chore: bump eslint to v9
+스코프 있음:   feat(auth): 소셜 로그인 연동 추가
+스코프 없음:   fix: 목록 페이지 무한 스크롤 중복 호출 수정
+스코프 있음:   refactor(api): 페이지네이션 헬퍼 분리
+스코프 없음:   chore: eslint v9로 올림
 ```
 
 ## 실행
