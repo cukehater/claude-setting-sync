@@ -8,6 +8,9 @@
 !/CLAUDE.md
 !/settings.json
 !/statusline.js
+!/hooks/
+/hooks/*
+!/hooks/herdr-agent-state.js
 
 !/skills/
 /skills/*

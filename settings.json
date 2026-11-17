@@ -12,7 +12,7 @@
       "Bash(git push:*)"
     ]
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -20,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Gravity\\.claude\\hooks\\herdr-agent-state.ps1\" session",
+            "command": "node \"$HOME/.claude/hooks/herdr-agent-state.js\" session",
             "timeout": 10
           }
         ]
@@ -39,11 +39,11 @@
     "understand-anything@understand-anything": true,
     "skill-creator@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
-    "eli5@claude-community": true,
     "humanize-korean@im-not-ai": true,
     "postman@claude-plugins-official": true,
     "impeccable@claude-community": true,
-    "vercel@claude-plugins-official": true
+    "vercel@claude-plugins-official": true,
+    "notion@anthropic-plugin-directory": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
