@@ -16,3 +16,4 @@
 /skills/*
 !/skills/git-commit/
 !/skills/squash-commit-range/
+!/skills/e2e-regression/
