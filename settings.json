@@ -3,9 +3,9 @@
     "EDITOR": "code --wait"
   },
   "attribution": {
-    "sessionUrl": false,
     "commit": "",
-    "pr": ""
+    "pr": "",
+    "sessionUrl": false
   },
   "permissions": {
     "deny": [
@@ -40,7 +40,6 @@
     "understand-anything@understand-anything": true,
     "skill-creator@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
-    "humanize-korean@im-not-ai": true,
     "postman@claude-plugins-official": true,
     "impeccable@claude-community": true,
     "vercel@claude-plugins-official": true,
@@ -69,12 +68,6 @@
       "source": {
         "source": "github",
         "repo": "anthropics/claude-plugins-community"
-      }
-    },
-    "im-not-ai": {
-      "source": {
-        "source": "github",
-        "repo": "epoko77-ai/im-not-ai"
       }
     }
   },
